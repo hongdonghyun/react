@@ -10,12 +10,21 @@ class App extends Component {
     // if문대신 조건부 연산자
     // [condition] ? [true] : [false]
     const name = 'hong3'
+    const style = {
+      color : 'aqua',
+      backgroundColor : 'black'
+    }
+    const style_h1  = {
+      color :'pink'
+      
+    }
     return (
       
       <div>
-        <h1>hello wold</h1>
-        <h2>enjoy react</h2>
-        <p>{name}</p>
+        { /* 주석은 이렇게 쓴다 */}
+        <h1 style={style_h1}>hello wold</h1>
+        <h2 style = {style}>enjoy react</h2>
+        <p className='hello'>{name}</p>
         <p> { 1+1 ===2 ? 'true' : 'false'} </p>
         </div>
     );
