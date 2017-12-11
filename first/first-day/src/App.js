@@ -26,7 +26,7 @@ class App extends Component {
         <h2 style = {style}>enjoy react</h2>
         <p className='hello'>{name}</p>
         <p> { 1+1 ===2 ? 'true' : 'false'} </p>
-        <MyComponent name='hong3' job='developer'/>
+        <MyComponent name='hong3' job='100su'favoriteNumber={1}/>
         </div>
     );
   }
