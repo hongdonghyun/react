@@ -1,4 +1,14 @@
 import React from 'react';
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+const Container = ({title,children}) => {
+    return (
+        <div>
+            <h2>{title}</h2>
+            <div>
+                {children}
+                </div>
+        </div>
+    );
+};
+
+export default Container;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MyComponent from './MyComponent'
+import MyComponent from './MyComponent';
 import './App.css';
-
+import Container from './Container';
 
 class App extends Component {
   render() { // 없으면 에러남
@@ -20,13 +20,16 @@ class App extends Component {
     }
     return (
       
+
       <div>
         { /* 주석은 이렇게 쓴다 */}
         <h1 style={style_h1}>hello wold</h1>
         <h2 style = {style}>enjoy react</h2>
         <p className='hello'>{name}</p>
         <p> { 1+1 ===2 ? 'true' : 'false'} </p>
-        <MyComponent name='hong3' job='100su'favoriteNumber={1}/>
+        <Container title='Welcome'>
+          <MyComponent/>
+          </Container>
         </div>
     );
   }

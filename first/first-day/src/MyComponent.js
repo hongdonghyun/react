@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+
 class MyComponent extends Component {
-    static defaultProps = {
-        job: 'developer',
-        name: 'defaultname'
+    state = {
+        number :0
     }
-    static propTypes = {
-        name : PropTypes.string,
-        job : PropTypes.string,
-        favoriateNumber : PropTypes.number.isRequied
+    handleClick = () => {
+        this.setState({
+            number: this.state.number + 1
+        });
     }
     render() {
-        const { name,job,favoriteNumber} = this.props;
+        const { handleClick} = this;
+        const { number } = this.state;
         return (
             <div>
-                <p>hello My name is {name}</p>
-                <p>Job is {job}</p>
-                <p>like number {favoriteNumber}</p>
+                <h1>{number}</h1>
+                <button onClick= {handleClick}>Click me!
+                </button>
             </div>
         );
     }
