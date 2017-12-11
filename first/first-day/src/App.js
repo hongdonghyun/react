@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MyComponent from './MyComponent'
 import './App.css';
 
 
@@ -26,6 +26,7 @@ class App extends Component {
         <h2 style = {style}>enjoy react</h2>
         <p className='hello'>{name}</p>
         <p> { 1+1 ===2 ? 'true' : 'false'} </p>
+        <MyComponent name='hong3' job='developer'/>
         </div>
     );
   }
