@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import TodoListTemplate from './components/TodoListTemplate'
 import Form from './components/Form'
 import TodoItemList from './components/TodoItemList'
+import Palette from './components/palette'
+
+const colors =['#343a40', '#f03e3e', '#12b886', '#228ae6'];
 
 class App extends Component {
   id = 3
   state = {
     input:'',
     todos: [
-      { id:0, text: '리액트 소개',checked:false},
-      { id:1, text: '리액트 소개', checked:true},
-      { id:2, text: '리액트 소개', checked:false}
-    ]
+      { id:0, text: '테스트1',checked:false},
+      { id:1, text: 'Test2', checked:true},
+      { id:2, text: 'ㅇㅎ', checked:false}
+    ],
+    color:'#343a40'
   }
   handleChange =(e) => {
     this.setState({
@@ -55,7 +59,7 @@ class App extends Component {
     })
   }
   render() {
-    const {input,todos} =this.state;
+    const {input,todos,color} =this.state;
     const {
       handleChange,handleCreate,handleKeyPress,handleToggle,handleRemove
     } = this;
@@ -67,6 +71,11 @@ class App extends Component {
       onChange={handleChange}
       onCreate={handleCreate}
     />
+    )}
+    palette={(
+      <Palette
+      colors = {colors}
+      />
     )}>
         <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
       </TodoListTemplate>

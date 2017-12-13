@@ -15,6 +15,10 @@
     color: white;
 
 }
+.palette-wrapper {
+    padding: 1rem;
+    background: #f1f3f5;
+}
 
 .form-wrapper {
     padding: 1rem;
