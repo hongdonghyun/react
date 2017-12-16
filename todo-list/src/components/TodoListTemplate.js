@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import './TodoListTemplate.css';
 
-
+// 스타일링을 위한 컴포넌트 ()
 const TodoListTemplate = ({palette,form,children}) => {
     return (
         <main className='todo-list-template'>
@@ -15,7 +15,7 @@ const TodoListTemplate = ({palette,form,children}) => {
         {form}
         </section>
         <section className='todos-wrapper'>
-        { children}
+        {children}
         </section>
         </main>
     );

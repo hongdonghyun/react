@@ -8,7 +8,7 @@ const colors =['#343a40', '#f03e3e', '#12b886', '#228ae6'];
 
 class App extends Component {
   id = 3
-  state = {
+  state = { /*해당 데이터가 Render에 영향을 미칠때 state에 넣는다. */
     input:'',
     todos: [
       { id:0, text: '테스트1',checked:false},
@@ -17,13 +17,13 @@ class App extends Component {
     ],
     color:'#343a40'
   }
-  handleChange =(e) => {
+  handleChange = (e) => {
     this.setState({
-      input:  e.target.value
+      input: e.target.value
     });
   }
   handleCreate = () => {
-    const { input,todos} = this.state
+    const { input,todos } = this.state
     this.setState({
       input:'',
       todos: todos.concat({
@@ -40,7 +40,8 @@ class App extends Component {
   }
   handleToggle = (id) => {
     const {todos} =this.state;
-
+    // 파라미터로 받은 ID를 가지고 몇번째에 위치했는지 리턴
+    // 값을 리턴하고 싶은경우 find 
     const index = todos.findIndex(todo=>todo.id===id);
     const selected = todos[index];
     const nextTodos = [...todos];

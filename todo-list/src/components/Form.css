@@ -1,9 +1,9 @@
 .form {
-    display: flex;
+    display: flex;/* 플렉스를 사용하기위해 지정해야함 */
 }
 
 .form-input {
-    flex: 1;
+    flex: 1; /* 다른 사이즈를 가지고 있는 공간을 제외한 나머지를 채운다. */
     font-size:1.25rem;
     outline: none;
     border: none;
@@ -11,7 +11,7 @@
 }
 
 .create-button {
-    padding-top: 0.5rem;
+    padding-top: 0.5rem; 
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
