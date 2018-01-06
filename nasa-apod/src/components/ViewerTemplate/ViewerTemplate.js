@@ -12,10 +12,9 @@ const ViewerTemplate = ({viewer,spaceNavigator}) => {
             </header>
             <div className={cx('viewer-wrapper')}>
                 { viewer }
-            <div className={cx('space-navigator-wrapper')}>
-                {spaceNavigator}
-
-            </div>
+                <div className={cx('space-navigator-wrapper')}>
+                    {spaceNavigator}
+                </div>
             </div>
         </div>
     );

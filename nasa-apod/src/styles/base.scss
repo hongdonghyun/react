@@ -3,9 +3,9 @@
 body {
     margin:0;
     background: $oc-gray-8;
-    box-sizing:border-box;
+    box-sizing:border-box; //테두리와 패딩이 사이즈에 포함 되어 사이즈 적용
 }
 
-* {
-    box-sizing:inherit;
+* { //모든태그에 적용
+    box-sizing:inherit; 
 }

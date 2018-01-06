@@ -6,9 +6,9 @@
         top: 0;
         height: 100%;
         display: flex;
-        align-items: center;
+        align-items: center; //세로로 정렬
         color: white;
-        &.left {
+        &.left { //부모와 같이 사용되었을 경우
             padding: 1rem;
         }
         &.right {
@@ -17,19 +17,19 @@
         .circle {
             width: 3rem;
             height: 3rem;
-            background: transparent;
+            background: transparent; //투명
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: center; //세로 정렬
+            justify-content: center; // 가로 정렬
             border-radius: 50%;
-            cursor: pointer;
-            &:hover {
+            cursor: pointer; 
+            &:hover { //마우스를 올렸을 때
                 background: rgba(0,0,0,0.25);
             }
-            &:active {
+            &:active {// 클릭 되었을 때
                 background: rgba(0,0,0,0.5);
             }
-            svg {
+            svg { // svg파일 수정
                 font-size: 2rem;
             }
         }
